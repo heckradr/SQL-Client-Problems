@@ -7,6 +7,8 @@ In the second solution called "App" there is another winforms project which is a
 
 The problem disappears if you include the NuGet package Microsoft.Data.SqlClient directly in the WinForms project. But I think it should work without this package as well. Since such a core project can be used in various apps, I don't want to have to add all the NuGet packages of the core project to each app.
 
+After the build of the second winforms project all needed files are properly in the bin/Debug output directory. I tried it also with .NET8 and .NET9 but this makes no difference. 
+
 Note: The Northwind database used for the test is not necessary. You can see the exception even without a working sql database.
 
 ## Problem
