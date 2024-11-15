@@ -1,7 +1,7 @@
 # SQL-Client-Problems
 
 ## Description
-In my demo project there are 2 solutions. A "Core" solution (with a DLL project) which included EF-Core as NuGet package. So it will get a reference to Microsoft.Data.SqlClient as a transitive package. There is also a test project in the same solution named "TestInsideSolution". This is a winforms project which is referencing only the core project. This is working as expected, the EF core query is running.
+In my demo project there are 2 solutions. A "Core" solution (with a DLL project) which included EF-Core as NuGet package. So it will get a reference to Microsoft.Data.SqlClient as a transitive package. There is also a test project in the same solution named "TestWithinSolution". This is a winforms project which is referencing only the core project. This is working as expected, the EF core query is running.
 
 In the second solution called "App" there is another winforms project which is an exact copy of the first winforms project. Only the reference to the core project was changed so it will point directly to the bin/Debug output of the core solution. Here it will throw an exception when trying to execute the code: Microsoft.Data.SqlClient is not supported on this platform
 
